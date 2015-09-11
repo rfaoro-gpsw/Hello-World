@@ -14,14 +14,23 @@
 #Variables
 
         TIMESTAMP=$(date +'%m/%d/%Y') #Define TIMESTAMP
+	TAGNAME=$USER-$TIMESTAMP
 
 #Executables
 	
 
-	git tag "$USER-$TIMESTAMP" #tag the HEAD
+	git tag $TAGNAME     #tag the HEAD
 
-        printf "\nYou have recorded a tag named: $USER-$TIMESTAMP\n\n" #confirm the tag
-
+	git tag | sort -r > TagLog      #List tags in reverse alphabetical order in file: TagLog
 	
+
+
+	git add .
+	
+	git commit
+
+        printf "\nYou have recorded a tag named: $TAGNAME\n\n" #confirm the tag
+
+	git push origin master 
 
 
