@@ -1,0 +1,27 @@
+#!/bin/bash
+
+#	Tag head of master branch with timestamp
+#	Create file called taglog
+#		Output all of the tags in the repo
+#		Sort reverse alphabetical order
+#		Insert new tag at the end of the file
+#		
+#	Take this script and put in a Jenkins job
+#	Run the job
+#	You should be able to send in a var
+
+
+#Variables
+
+        TIMESTAMP=$(date +'%m/%d/%Y') #Define TIMESTAMP
+
+#Executables
+	
+
+	git tag "$USER-$TIMESTAMP" #tag the HEAD
+
+        printf "\nYou have recorded a tag named: $USER-$TIMESTAMP\n\n" #confirm the tag
+
+	
+
+

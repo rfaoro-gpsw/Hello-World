@@ -1,0 +1,40 @@
+#!/bin/bash
+
+#       Create a script in bash
+#       Create a variable called tagvar
+#       Make tagvar = time stamp (mmddyyyy) (find current date in mmddyyyy)
+#       Append tagvar to be like Rachel-06152015
+#       Tag git branch with tagvar
+#       Don’t let it do 06152015:13:06
+
+
+#Variables
+#tagvar
+#timestamp
+#User
+
+#Define timestamp
+        timestamp=$(date +'%m/%d/%Y')
+
+
+#Executables
+#printf $timestamp
+
+        printf "\nHello $USER, print the commit you would like to tag: "
+
+        read TAG_VAR
+	
+	printf "\nName your tag: "
+
+	read TAG_NAME
+
+	git tag $TAG_VAR 
+
+	git tag $TAG_NAME-$timestamp $TAG_VAR
+	
+	git tag -d $TAG_VAR
+
+        printf "\nYour commit, $TAG_VAR, has been tagged as this: $TAG_NAME-$timestamp.\n\n"
+
+
+#tag $tagvar $timestamp
