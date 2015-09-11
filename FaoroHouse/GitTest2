@@ -29,8 +29,9 @@
 	
 	git commit
 
+	git push origin master
+
         printf "\nYou have recorded a tag named: $TAGNAME\n\n" #confirm the tag
 
-	git push origin master 
 
 
