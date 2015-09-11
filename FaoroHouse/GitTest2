@@ -21,7 +21,7 @@
 
 	git tag $TAGNAME     #tag the HEAD
 
-	git tag | sort -r > taglog      #List tags in reverse alphabetical order in file: TagLog
+	git tag | sort -r > taglog      #List tags in reverse alphabetical order in file: taglog
 	
 
 
@@ -29,9 +29,11 @@
 	
 	git commit
 
-	git push origin master
+	git push --tags     #push tags to remote repo
 
-        printf "\nYou have recorded a tag named: $TAGNAME\n\n" #confirm the tag
+	git push origin master     #push local changes to remote repo
+
+        echo -e "\nYou have recorded a tag named: $TAGNAME\n\n" #confirm the tag
 
 
 
