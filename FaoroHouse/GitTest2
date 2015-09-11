@@ -21,7 +21,7 @@
 
 	git tag $TAGNAME     #tag the HEAD
 
-	git tag | sort -r > TagLog      #List tags in reverse alphabetical order in file: TagLog
+	git tag | sort -r > taglog      #List tags in reverse alphabetical order in file: TagLog
 	
 
 
