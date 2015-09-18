@@ -23,6 +23,8 @@
 
 #Executables
 	
+	git pull
+	
 	if grep -Fxq "$TAGNAME" taglog
 	
 	then
