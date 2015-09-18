@@ -11,10 +11,14 @@
 #	You should be able to send in a var
 
 
+
+
 #Variables
 
         TIMESTAMP=$(date +'%m/%d/%Y') #Define TIMESTAMP
 	TAGNAME=$USER-$TIMESTAMP
+
+
 
 #Executables
 	
@@ -25,12 +29,9 @@
 	
 	echo "$TAGNAME" >> taglog     #Put a copy of the tag at end of the file: taglog
 
-#	sed '$ TAGNAME' taglog
-#	sed -i '' -e '$TAGNAME\' taglog#
-
 	git add .
 	
-	git commit
+	git commit -m "You just tagged $TAGNAME"
 
 	git push --tags     #push tags to remote repo
 
@@ -40,3 +41,10 @@
 
 
 
+
+
+#	git tag -d 12345	#delete tag 12345 from local repository
+#	git push origin :refs/tags/12345	#delete tag 12345 from the remote repository
+
+#	sed '$ TAGNAME' taglog
+#	sed -i '' -e '$TAGNAME\' taglog
