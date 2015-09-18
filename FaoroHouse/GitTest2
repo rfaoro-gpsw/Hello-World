@@ -23,21 +23,20 @@
 
 	git tag | sort -r > taglog      #List tags in reverse alphabetical order in file: taglog
 	
-	echo "$TAGNAME" >> taglog
+	echo "$TAGNAME" >> taglog     #Put a copy of the tag at end of the file: taglog
 
 #	sed '$ TAGNAME' taglog
+#	sed -i '' -e '$TAGNAME\' taglog#
 
-#	sed -i '' -e '$TAGNAME\' taglog
-
-#	git add .
+	git add .
 	
-#	git commit
+	git commit
 
-#	git push --tags     #push tags to remote repo
+	git push --tags     #push tags to remote repo
 
-#	git push origin master     #push local changes to remote repo
+	git push origin master     #push local changes to remote repo
 
-#       echo -e "\nYou have recorded a tag named: $TAGNAME\n\n" #confirm the tag
+        echo -e "\nYou have recorded a tag named: $TAGNAME\n\n" #confirm the tag
 
 
 
