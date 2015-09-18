@@ -15,8 +15,9 @@
 
 #Variables
 
-        TIMESTAMP=$(date +'%m/%d/%Y') #Define TIMESTAMP
-	TAGNAME=$USER-$TIMESTAMP
+        DATE=$(date +'%m/%d/%Y') #Define DATE
+	TIME=$(date +'%H:%M:%S') #Define TIME
+	TAGNAME=$USER-$DATE-$TIME #Define TAGNAME
 
 
 
