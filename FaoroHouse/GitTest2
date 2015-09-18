@@ -17,14 +17,24 @@
 
         DATE=$(date +'%m/%d/%y') #Define DATE
 	TIME=$(date +'%H.%M.%S') #Define TIME
-	TAGNAME="$USER-$DATE-$TIME" #Define TAGNAME
+	TAGNAME="$USER-$DATE" #Define TAGNAME
 
-
+#	VALUE=$( grep -ic "TAGNAME" /Users/rfaoro/GitHub/Hello-World/FaoroHouse/taglog )
 
 #Executables
 	
+	if grep -Fxq "$TAGNAME" taglog
+	
+	then
+		git tag -d $TAGNAME     #Delete tag if it already exists
+		
+		git tag $TAGNAME	#Tag new tag with same name	
+	else
+		
+		git tag $TAGNAME     #tag the HEAD if there is not a tag with the same name already
 
-	git tag $TAGNAME     #tag the HEAD
+	fi
+
 
 	git tag | sort -r > taglog      #List tags in reverse alphabetical order in file: taglog
 	
