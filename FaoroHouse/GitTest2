@@ -24,6 +24,10 @@
 #Executables
 	
 	git pull
+
+	git fetch origin
+
+
 	
 	if grep -Fxq "$TAGNAME" taglog
 	
@@ -36,6 +40,7 @@
 		git tag $TAGNAME     #tag the HEAD if there is not a tag with the same name already
 
 	fi
+
 
 
 	git tag | sort -r > taglog      #List tags in reverse alphabetical order in file: taglog
