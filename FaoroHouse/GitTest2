@@ -15,8 +15,8 @@
 
 #Variables
 
-        DATE=$(date +'%m/%d/%Y') #Define DATE
-	TIME=$(date +'%H.%M.%S') #Define TIME
+        DATE=$(date +'%m/%d/%y') #Define DATE
+	TIME=$(date +'%h.%M.%S') #Define TIME
 	TAGNAME="$USER-$DATE-$TIME" #Define TAGNAME
 
 
