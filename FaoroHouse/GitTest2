@@ -32,6 +32,8 @@
 	then
 		git tag -d $TAGNAME     #Delete tag if it already exists
 		
+		git push origin :refs/tags/$TAGNAME
+				
 		git tag $TAGNAME	#Tag new tag with same name	
 	else
 		
