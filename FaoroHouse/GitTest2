@@ -48,7 +48,7 @@
 
 	git add .     #Stage your commit
 	
-	git commit -m      "You just tagged $TAGNAME"
+	git commit -m "$USER just tagged $TAGNAME"
 
 	git push --tags     #Push tags to remote repo
 
