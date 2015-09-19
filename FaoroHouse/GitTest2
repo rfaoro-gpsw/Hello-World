@@ -19,7 +19,6 @@
 	TIME=$(date +'%H.%M.%S') #Define TIME
 	TAGNAME="$USER-$DATE" #Define TAGNAME
 
-#	VALUE=$( grep -ic "TAGNAME" /Users/rfaoro/GitHub/Hello-World/FaoroHouse/taglog )
 
 #Executables
 	
@@ -27,17 +26,17 @@
 
 
 	
-	if grep -Fxq "$TAGNAME" taglog
+	if grep "$TAGNAME" taglog	    #Checks if $TAGNAME exists
 	
 	then
 		git tag -d $TAGNAME     #Delete tag if it already exists
 		
-		git push origin :refs/tags/$TAGNAME
+		git push origin :refs/tags/$TAGNAME     #Delete tag remotely on GitHub
 				
 		git tag $TAGNAME	#Tag new tag with same name	
 	else
 		
-		git tag $TAGNAME     #tag the HEAD if there is not a tag with the same name already
+		git tag $TAGNAME     #Tag the HEAD if there is not a tag with the same name already
 
 	fi
 
@@ -47,15 +46,15 @@
 	
 	echo "$TAGNAME" >> taglog     #Put a copy of the tag at end of the file: taglog
 
-	git add .
+	git add .     #Stage your commit
 	
-	git commit -m "You just tagged $TAGNAME"
+	git commit -m      "You just tagged $TAGNAME"
 
-	git push --tags     #push tags to remote repo
+	git push --tags     #Push tags to remote repo
 
-	git push origin master     #push local changes to remote repo
+	git push origin master     #Push local changes to remote repo
 
-        echo -e "\nYou have recorded a tag named: $TAGNAME\n\n" #confirm the tag
+        echo -e "\nYou have recorded a tag named: $TAGNAME\n\n" #Confirm the tag
 
 
 
