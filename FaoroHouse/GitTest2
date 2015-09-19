@@ -26,7 +26,7 @@
 
 
 	
-	if grep "$TAGNAME" taglog	    #Checks if $TAGNAME exists
+	if grep -q "$TAGNAME" taglog	    #Checks if $TAGNAME exists without outputting the findings
 	
 	then
 		git tag -d $TAGNAME     #Delete tag if it already exists
