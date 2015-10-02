@@ -22,7 +22,7 @@
 
 #Executables
 	
-	git pull origin	     #Get up-to-date with all new tags and commits
+	git pull origin master	     #Get up-to-date with all new tags and commits
 
 
 	
